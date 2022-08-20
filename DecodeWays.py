@@ -1,4 +1,8 @@
 class Decoder:
+    """
+        This class solves the problem: https://leetcode.com/problems/decode-ways/
+        The only exposed the method is `get_decoding_ways` that should be called with the test cases.
+    """
 
     def get_decoding_ways(self, encoded_digits: str) -> int:
         """
