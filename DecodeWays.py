@@ -107,3 +107,4 @@ class Decoder:
     
         return (previous_digit == '1' or 
             (previous_digit == '2' and current_digit in '123456'))
+
