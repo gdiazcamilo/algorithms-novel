@@ -2,4 +2,4 @@
 
 Solution to common algorithms applying best practices and OO in Python.
 
-Here readability, clarity, self-documenting code have higher priority than runtime or space efficiency.
+The algorithms code written here favors readability, clarity and self-documenting code instead of runtime or space efficiency.
