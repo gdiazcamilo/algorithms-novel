@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Decoder:
     """
         This class solves the problem: https://leetcode.com/problems/decode-ways/
@@ -56,7 +59,7 @@ class Decoder:
         return decoding_ways_previous_position
 
 
-    def __first_digit_can_be_decoded(self, encoded_digits: str):
+    def __first_digit_can_be_decoded(self, encoded_digits: str) -> bool:
         """
             Check if the first digit is not zero ('0').
 
@@ -66,7 +69,7 @@ class Decoder:
         return self.__can_be_decoded(None, encoded_digits[0])
 
 
-    def __can_be_decoded(self, previous_digit, current_digit):
+    def __can_be_decoded(self, previous_digit: str, current_digit: str) -> bool:
         """
             Checks if the previous and current digit combined in that order 
             forms a number that can be mapped to any letter.
@@ -80,7 +83,7 @@ class Decoder:
         return current_digit != '0' or previous_digit in ('1', '2')
         
 
-    def __encoded_digits(self, encoded_digits):
+    def __encoded_digits(self, encoded_digits: str) -> List[(str, str)]:
         """
             Yields all the digits in the received param in pair of two using a 
             tuple (first_digit, current_digit).
@@ -92,7 +95,7 @@ class Decoder:
             yield previous_digit, current_digit
 
 
-    def __digits_must_be_combined(self, previous_digit, current_digit):
+    def __digits_must_be_combined(self, previous_digit: str, current_digit: str) -> bool:
         """
             Returns true if the previous and current digits combined in that 
             same order can only be used together and not as single digits.
@@ -103,7 +106,7 @@ class Decoder:
         return previous_digit in '12' and current_digit == '0' 
 
 
-    def __digits_can_be_combined_or_single(self, previous_digit, current_digit):
+    def __digits_can_be_combined_or_single(self, previous_digit: str, current_digit: str) -> bool:
         """
         Returns true if the digits can form a number between 11 and 26 excluding 20.
         10 and 20 are special cases handled in other method.

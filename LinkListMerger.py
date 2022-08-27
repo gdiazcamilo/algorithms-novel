@@ -6,7 +6,7 @@ class LinkListMerger:
         The only exposed the method is `merge` that should be called with the test cases.
     """
 
-    def merge(self, first_list_node, second_list_node):
+    def merge(self, first_list_node: ListNode, second_list_node: ListNode):
         """
         Merges two linked list starting at the given nodes (usually the head).
 
@@ -43,7 +43,7 @@ class LinkListMerger:
 
         return merged_list_pre_head.next
     
-    def __comparison_is_possible(self, first_list_node, second_list_node):
+    def __comparison_is_possible(self, first_list_node: ListNode, second_list_node: ListNode) -> bool:
         return first_list_node and second_list_node
 
 
