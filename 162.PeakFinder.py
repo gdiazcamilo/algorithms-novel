@@ -13,6 +13,23 @@ class PeakFinder:
 
         We do binary search and always check if we are in a peak. 
         If not, move the pointers to any side that is higher than current.
+
+        |         |
+        | |     | |       | |
+        | | | | | |   |   | |
+        | | | | | | | |   | |
+        | | | | | | | | | | |
+        L       M           R
+
+        |         |
+        | |     | |       | |
+        | | | | | |   |   | |
+        | | | | | | | |   | |
+        | | | | | | | | | | |
+                  L   M      R 
+                      ^peak       
+
+
     """
 
     def find_peak(self, numbers: List[int]) -> int:
