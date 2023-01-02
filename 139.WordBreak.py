@@ -11,6 +11,7 @@ class WordBreaker:
     Evaluate if incremental partitions of the string are in wordDict.
     When one partition is in the dict, repeat the process with the remaining portion of the string; if 
     it's not in the dict keep increasing the partition. The `memo` is for optimization purposes.
+    
     """
 
     def can_break_word(self, s: str, wordDict: List[str]) -> bool:
